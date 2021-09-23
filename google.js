@@ -37,8 +37,6 @@ function smallBar() {
 //                   x.value = x.value.toUpperCase();
 //                 }
 
-// alert("chal");
-
 var username = "";
 var namee = "";
 
@@ -48,8 +46,7 @@ function getUserDetails() {
 
     var newTitle = "Google Account\n" + namee + "\n" + username;
 
-    if(namee!=null  &&  username!=null)
-    {
+    if (namee != null && username != null) {
         document.getElementById("account").title = newTitle;
     }
 }
@@ -78,26 +75,27 @@ searchedText.addEventListener("keyup", function (event) {
 function dropSettingContents() {
     document.getElementById("settingDrop").classList.toggle("show");
     // alert("working");
-}
+};
 
-window.onclick = function (event) {
-    if (!event.target.matches('.settingButton')) {
-        // document.getElementById("setting").click();
-        var dropdown = document.getElementsByClassName("dropDownContent");
-        var ind;
-        // alert("wow");
+// window.onclick = function (event) {
+//     if (!event.target.matches(".settingButton")) {
+//         var dropdown = document.getElementsByClassName("dropDownContent");
 
-        for (ind = 0; ind < dropdown.length; ind++) {
-            //     if(dropdown[ind].classList.contains('show'))
-            //     {
-            //         dropdown[ind].classList.remove('show');
-            //     }
+//         for (var ind = 0; ind < dropdown.length; ind++) {
+//             if (dropdown[ind].classList.contains("show")) {
+//                 dropdown[ind].classList.remove("show");
+//             }
 
-            var openDropdown = dropdown[ind];
-            if (openDropdown.classList.contains('show')) {
-                openDropdown.classList.remove('show');
-                // alert("nice");
-            }
-        }
-    }
+//             // var openDropdown = dropdown[ind];
+//             // if (openDropdown.classList.contains('show')) {
+//             //     openDropdown.classList.remove('show');
+//             // alert("nice");
+//             // }
+//         }
+//     }
+// };
+
+function dropOptionContents() {
+    document.getElementById("optionDrop").classList.toggle("show");
+    // alert("working");
 }

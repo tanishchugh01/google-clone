@@ -5,6 +5,11 @@
         <meta http-equiv="X-UA-Compatible" />
         <meta name="viewport" content="width=device-width, initial scale=1.0" />
         <title>Google Search</title>
+        <link
+            rel="icon"
+            href="images/googleLogoSmall.png"
+            type="image/x-icon"
+        />
         <link rel="stylesheet" href="google.css" />
     </head>
 
@@ -16,6 +21,7 @@
                     id="logo"
                     src="images/googlelogo_color_92x30dp.png"
                     title="Go to Google Home"
+                    alt="google-logo"
                 />
             </a>
             <!-- <div class="searchPanel"> -->
@@ -94,7 +100,7 @@
                     id="setting"
                     class="rightButtons buttons settingButton"
                     title="Settings"
-                    >
+                >
                     <svg
                         focusable="false"
                         xmlns="http://www.w3.org/2000/svg"
@@ -121,18 +127,33 @@
                 </div>
             </div>
 
-            <button id="apps" class="rightButtons buttons" title="Google apps">
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    focusable="false"
-                    viewBox="0 0 24 24"
-                    fill="#1f1f1fae"
+            <div class="dropMenu">
+                <button
+                    id="apps"
+                    class="rightButtons buttons"
+                    title="Google apps"
+                    onclick="dropOptionContents()"
                 >
-                    <path
-                        d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z"
-                    />
-                </svg>
-            </button>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                        fill="#1f1f1fae"
+                    >
+                        <path
+                            d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z"
+                        />
+                    </svg>
+                </button>
+
+                <div class="dropDownContent" id="optionDrop">
+                    <a href="#">Search Settings</a>
+                    <a href="#">Languages</a>
+                    
+                    <hr />
+                    <a href="#">Dark theme: Off</a>
+                </div>
+            </div>
 
             <button
                 id="account"
@@ -168,6 +189,8 @@
             Feel free to contact me..
         </div>
         
+        
+
         <div>
             <!-- hello mmmmmmmmmmmmmmmmmmmmmmmmm -->
         </div>
